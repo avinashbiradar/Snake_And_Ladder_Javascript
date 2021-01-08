@@ -14,9 +14,14 @@ class Utility{
            console.log("Die Number is :"+dice);
            switch(action){
                case LADDER:
+                let limit;
+                limit = playerPosition;
+                limit = limit + dice;
+                if (limit<=END_POSITION) {
                 console.log("Ladder");
                 playerPosition = playerPosition + dice;
                 console.log("current ladder position: " + playerPosition);
+                }
                 break;
                case SNAKE:
                 console.log("Snake");
