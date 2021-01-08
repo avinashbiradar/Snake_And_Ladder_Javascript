@@ -4,6 +4,7 @@
     const SNAKE = 3;
     const NOPLAY = 1;
     let  playerPosition=STARTING_POSITION;
+    let totalDiceCount=0;
 class Utility{    
   
         gamePlay=()=>{
@@ -43,6 +44,8 @@ class Utility{
     }
         diceRoll=()=>{
             let random = Math.floor((Math.random()*6)+1);
+            totalDiceCount++;
+            console.log("totalDiceCount " +totalDiceCount);
             return random;     
         }
         optionCheck=()=>{
