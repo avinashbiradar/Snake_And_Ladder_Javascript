@@ -1,10 +1,13 @@
     const STARTING_POSITION = 0;
+    const END_POSITION = 100;
     const LADDER = 2;
     const SNAKE = 3;
     const NOPLAY = 1;
     let  playerPosition=STARTING_POSITION;
 class Utility{    
+  
         gamePlay=()=>{
+         while(playerPosition<END_POSITION){
            var action=0;
            let dice=this.diceRoll();
            var action =this.optionCheck();
@@ -30,6 +33,7 @@ class Utility{
                     playerPosition=STARTING_POSITION;
                 }
                 console.log("no play position: "+playerPosition);
+            }
         }
     }
         diceRoll=()=>{
