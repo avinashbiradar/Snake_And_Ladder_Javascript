@@ -1,3 +1,4 @@
-const utility=require('./utility')
+const Utility=require('./utility')
 console.log("Welcome to Snake and Ladder ");
-utility.gamePlay();
+Utility.gamePlay();
+Utility.twoPlayers();
