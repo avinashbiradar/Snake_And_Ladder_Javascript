@@ -1,22 +1,21 @@
-      const STARTING_POSITION = 0;
+    const STARTING_POSITION = 0;
     const ENDING_POSITION = 100;
+    const NOPLAY = 1;
     const LADDER = 2;
     const SNAKE = 3;
-    const NOPLAY = 1;
-    let totalDiceCount=0;
+   let totalDiceCount=0;
     let TASK;
 class Utility{    
-  
         gamePlay=(playerPosition,totalDiceCount)=>{
-         if(playerPosition<ENDING_POSITION){
-           var action=0;
-           let dice=this.diceRoll();
-           var action =this.optionCheck();
+          if(playerPosition<ENDING_POSITION){
+            var action=0;
+            let dice=this.diceRoll();
+            var action =this.optionCheck();
            switch(action){
                case LADDER:
                 if (playerPosition+dice<=ENDING_POSITION) {
-                TASK="Ladder";
-                playerPosition = playerPosition + dice;
+                     TASK="Ladder";
+                     playerPosition = playerPosition + dice;
                 }
                 break;
                case SNAKE:
@@ -58,13 +57,13 @@ class Utility{
             dice_count = this.dice_Player(dice_count);
         }
         if(Player1position == ENDING_POSITION){
-            console.log("Player 1 won the match");
+            console.log("Player 1 won the match\n");
         }
         else if(Player2position == ENDING_POSITION){
-            console.log("Player 2 won the match");
+            console.log("Player 2 won the match\n");
         }
     }
-        dice_Player=( diceCount)=>
+        dice_Player=(diceCount)=>
         {
             diceCount++;
             return diceCount;
